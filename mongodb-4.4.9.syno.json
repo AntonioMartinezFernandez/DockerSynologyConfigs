@@ -1,0 +1,85 @@
+{
+   "CapAdd" : null,
+   "CapDrop" : null,
+   "cmd" : "mongod",
+   "cpu_priority" : 50,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : true,
+   "enabled" : false,
+   "entrypoint_default" : "docker-entrypoint.sh",
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "GOSU_VERSION",
+         "value" : "1.12"
+      },
+      {
+         "key" : "JSYAML_VERSION",
+         "value" : "3.13.1"
+      },
+      {
+         "key" : "MONGO_PACKAGE",
+         "value" : "mongodb-org"
+      },
+      {
+         "key" : "MONGO_REPO",
+         "value" : "repo.mongodb.org"
+      },
+      {
+         "key" : "MONGO_MAJOR",
+         "value" : "4.4"
+      },
+      {
+         "key" : "MONGO_VERSION",
+         "value" : "4.4.9"
+      },
+      {
+         "key" : "MONGO_INITDB_ROOT_USERNAME",
+         "value" : "root"
+      },
+      {
+         "key" : "MONGO_INITDB_ROOT_PASSWORD",
+         "value" : "my_root_password"
+      }
+   ],
+   "exporting" : false,
+   "id" : "84a155c1669395b27ad5697d429b6b5be8c7bfd90b3dc922c811d7e44d1449b2",
+   "image" : "mongo:4.4.9",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "links" : [],
+   "memory_limit" : 2097152000,
+   "name" : "mongodb-4.4.9",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "bridge"
+      }
+   ],
+   "network_mode" : "bridge",
+   "port_bindings" : [
+      {
+         "container_port" : 27017,
+         "host_port" : 27017,
+         "type" : "tcp"
+      }
+   ],
+   "privileged" : false,
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/docker/mongodb",
+         "mount_point" : "/data/db",
+         "type" : "rw"
+      }
+   ]
+}
